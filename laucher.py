@@ -80,12 +80,10 @@ def get_data_to_path(path):
 
 # detecta los mods presentes en la carpeta mdos
 def detect_mods(path: str):
-    # Obtener la lista de archivos y carpetas en el directorio actual
-    content = os.listdir(path)
-
     # la variable global es para no pisar el contenido en cada iteracion recursiva
     global file_content
-
+    # Obtener la lista de archivos y carpetas en el directorio actual
+    content = os.listdir(path)
         
     for element in content:
         element_path = os.path.join(path, element)
@@ -148,14 +146,6 @@ def install_mod(game_path: str, mod_path: str, mod_version: str, mod_name: str):
 # elimina los archivos del mod de la carpeta del juego
 def uninstall_mod(id: int):
     global file_content
-    """with open(SOTORAGE_PATH, 'r') as f:
-        data = json.load(f)
-        mod_instaled = data[INSTALLED_MODS][id]
-
-        for to_delete in mod_instaled['files']:
-            command = f'del "{os.path.join(mod_instaled['path'], to_delete)}"'
-
-            os.system(command)"""
     mod_instaled = file_content[INSTALLED_MODS][id]
 
     for to_delete in mod_instaled['files']:
@@ -167,8 +157,6 @@ def uninstall_mod(id: int):
         
         del file_content[INSTALLED_MODS][id]
         json.dump(file_content, f, indent=4)
-
-        
 
 
 
