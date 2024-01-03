@@ -1,0 +1,208 @@
+{
+    "mods": [
+        {
+            "DLSS-FG Assassin's Creed Mirage": {
+                "mod_version": "FSR2Streamline_ACMirage_1.0.1",
+                "fsr_version": "DLSS",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\DLSS-FG Assassin's Creed Mirage\\FSR2Streamline_ACMirage_1.0.1"
+            }
+        },
+        {
+            "DLSS-FG Assassin's Creed Mirage": {
+                "mod_version": "FSR2Streamline_ACMirage_1.0.2",
+                "fsr_version": "DLSS",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\DLSS-FG Assassin's Creed Mirage\\FSR2Streamline_ACMirage_1.0.2"
+            }
+        },
+        {
+            "DLSS-FG Assassin's Creed Mirage": {
+                "mod_version": "FSR2Streamline_ACMirage_1.0.3",
+                "fsr_version": "DLSS",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\DLSS-FG Assassin's Creed Mirage\\FSR2Streamline_ACMirage_1.0.3"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.5.0",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.5.0\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.5.0",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.5.0\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.5.0",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.5.0\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.5.0",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.5.0\\FSR2FSR3_SDK"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.6.0",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.6.0\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.6.0",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.6.0\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.6.0",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.6.0\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.6.0",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.6.0\\FSR2FSR3_SDK"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.0",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.0\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.0",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.0\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.0",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.0\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.0",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.0\\FSR2FSR3_SDK"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.1",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.1\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.1",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.1\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.1",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.1\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.1",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.1\\FSR2FSR3_SDK"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.2",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.2\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.2",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.2\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.2",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.2\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.2",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.2\\FSR2FSR3_SDK"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.3",
+                "fsr_version": "FSR2FSR3_200",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.3\\FSR2FSR3_200"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.3",
+                "fsr_version": "FSR2FSR3_210",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.3\\FSR2FSR3_210"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.3",
+                "fsr_version": "FSR2FSR3_220",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.3\\FSR2FSR3_220"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.3",
+                "fsr_version": "FSR2FSR3_SDK",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.3\\FSR2FSR3_SDK"
+            }
+        }
+    ],
+    "commons_files": [
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.2",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.2\\enable_proxy\\fsr2fsr3.config.toml"
+            }
+        },
+        {
+            "FSR2FSR3": {
+                "mod_version": "0.7.3",
+                "path": "J:\\Documentos\\python\\gui-fsr3-launcher\\mods\\FSR2FSR3\\0.7.3\\enable_fake_gpu\\fsr2fsr3.config.toml"
+            }
+        }
+    ],
+    "installed_mods": []
+}
