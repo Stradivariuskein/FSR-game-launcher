@@ -161,7 +161,7 @@ def install_mod(game_path: str, mod_path: str, mod_version: str, mod_name: str):
 
         for common_file in data[COOMONS_FILES]:
             if common_file[mod_name]['mod_version'] == mod_version:
-                command = f'copy "{common_file[mod_name]['path']}" "{game_path}"'
+                command = f'copy "{common_file[mod_name]["path"]}" "{game_path}"'
 
                 os.system(command)
                 files_copied += [os.path.basename(common_file[mod_name]['path'])]
@@ -186,13 +186,30 @@ def uninstall_mod(id: int):
     mod_instaled = file_content[INSTALLED_MODS][id]
 
     for to_delete in mod_instaled['files']:
-        command = f'del "{os.path.join(mod_instaled['path'], to_delete)}"'
+        command = f'del "{os.path.join(mod_instaled["path"], to_delete)}"'
 
         os.system(command)
     with open(SOTORAGE_PATH, 'w') as f:
         
         del file_content[INSTALLED_MODS][id]
         json.dump(file_content, f, indent=4)
+
+def extract_icon(path):
+    tmp_icon = '\\tmp'
+
+    command = f'.\iconsext.exe /save "{path}" "{ICONS_PATH}{tmp_icon}" -icons'
+    os.system(command)
+    icons = os.listdir(f'{ICONS_PATH}{tmp_icon}')
+
+    # obtenemos el nombre del icono y su extencion
+    name_ico, extension_ico = os.path.splitext(os.path.basename(f"{ICONS_PATH}{tmp_icon}\\{icons[0]}"))
+    name_exe, _ = os.path.splitext(os.path.basename(f"{path}"))
+    # obtenemos el nombre del exe
+    name_ico, extension_ico = os.path.splitext(os.path.basename(f"{ICONS_PATH}{tmp_icon}\\{icons[0]}"))
+    icon_path =f"{ICONS_PATH}\\{name_exe}{extension_ico}"
+    command = f'move "{ICONS_PATH}{tmp_icon}\\{name_ico}{extension_ico}" "{icon_path}"'
+    os.system(command)
+    return icon_path
 
 def add_game(path, game_name=None):
     global file_content 
@@ -213,6 +230,8 @@ def add_game(path, game_name=None):
 
 if __name__ == "__main__":
 
+
+    extract_icon("C:\\Users\\notebook\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe")
     read_storage()
     detect_mods(MOD_PATH)
     
