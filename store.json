@@ -203,5 +203,48 @@
                 "path": "J:\\Documentos\\python\\FSR-game-launcher\\mods\\FSR2FSR3\\0.7.3\\enable_fake_gpu\\fsr2fsr3.config.toml"
             }
         }
+    ],
+    "icons": [
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\ForeverSkies.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\Ghostrunner.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\Ghostrunner.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\Ghostrunner.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\Ghostrunner.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\ForeverSkies.ico"
+        },
+        {
+            "icon_path": "J:\\Documentos\\python\\FSR-game-launcher\\icons\\gotg.ico"
+        }
+    ],
+    "games": [
+        {
+            "name": "Ghostrunner",
+            "path": "J:/juegos/Ghostrunner/Ghostrunner.exe",
+            "iconID": 4,
+            "modID": null
+        },
+        {
+            "name": "ForeverSkies",
+            "path": "J:/Descargas/Forever Skies-InsaneRamZes/ForeverSkies.exe",
+            "iconID": 5,
+            "modID": null
+        },
+        {
+            "name": "gotg",
+            "path": "J:/juegos/MarvelGOTG/retail/gotg.exe",
+            "iconID": 6,
+            "modID": null
+        }
     ]
 }

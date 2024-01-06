@@ -9,6 +9,8 @@ MOD_PATH = os.path.abspath("./mods")
 
 SOTORAGE_PATH = "store.json"
 
+EXT_ICON_PATH = os.path.abspath('iconsext.exe')
+
 ICONS_PATH = os.path.abspath("./icons")
 
 # Obtiene el directorio actual del script en ejecución
@@ -22,10 +24,17 @@ COOMONS_FILES = 'commons_files'
 #globales
 file_content = {'mods': []}
 
+#############################################################################################################################
+# agregar funcion para desactivar el overlay
+# agregar funcion para crear mods
+# common_files reemplazar por un unico archivo enable gpu 
+# agregar ruta de juegos de stema y epic
+#############################################################################################################################
+# wrapper para guardar los cambios del archvo
 def saved_file(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
-        global file_content  # Asegúrate de que file_content esté declarado antes de usarlo
+        global file_content  
         with open(SOTORAGE_PATH, 'w') as f:
             json.dump(file_content, f, indent=4)
         return result
@@ -124,7 +133,7 @@ def detect_mods(path: str):
             detect_mods(element_path)
     
 
-
+# valida si el archivo existe y contiene data
 def read_storage():
     global file_content
     try:
@@ -132,13 +141,13 @@ def read_storage():
             file_data = json.load(f)
             if file_data and file_data['mods'] != []:
                 file_content = file_data
-                print(file_data)
+
                 return True
     except FileNotFoundError:
         detect_mods(MOD_PATH)
-        print(file_content)
         return False
     except KeyError:
+        detect_mods(MOD_PATH)
         return False
     except Exception as e:
         raise e
@@ -194,36 +203,63 @@ def uninstall_mod(id: int):
         del file_content[INSTALLED_MODS][id]
         json.dump(file_content, f, indent=4)
 
-def extract_icon(path):
-    tmp_icon = '\\tmp'
-
-    command = f'.\iconsext.exe /save "{path}" "{ICONS_PATH}{tmp_icon}" -icons'
+# extrae el icono del exe
+def extract_icon(path) -> str:
+    tmp_icon = os.path.join(ICONS_PATH, 'tmp')
+    # aseguramos q no alla otros iconos en el directorio
+    os.system(f'del /Q /S {tmp_icon}\\*')
+    command = f'{EXT_ICON_PATH} /save "{path}" "{tmp_icon}" -icons'
     os.system(command)
-    icons = os.listdir(f'{ICONS_PATH}{tmp_icon}')
-
-    # obtenemos el nombre del icono y su extencion
-    name_ico, extension_ico = os.path.splitext(os.path.basename(f"{ICONS_PATH}{tmp_icon}\\{icons[0]}"))
-    name_exe, _ = os.path.splitext(os.path.basename(f"{path}"))
-    # obtenemos el nombre del exe
-    name_ico, extension_ico = os.path.splitext(os.path.basename(f"{ICONS_PATH}{tmp_icon}\\{icons[0]}"))
-    icon_path =f"{ICONS_PATH}\\{name_exe}{extension_ico}"
-    command = f'move "{ICONS_PATH}{tmp_icon}\\{name_ico}{extension_ico}" "{icon_path}"'
-    os.system(command)
+    icons = os.listdir(tmp_icon)
+    if icons != []:
+        # obtenemos el nombre del icono y su extencion
+        name_ico, extension_ico = os.path.splitext(os.path.basename(f"{tmp_icon}\\{icons[0]}"))
+        # obtenemos el nombre del juego(exe)
+        name_exe, _ = os.path.splitext(os.path.basename(f"{path}"))
+        
+        icon_path =f"{ICONS_PATH}\\{name_exe}{extension_ico}"
+        command = f'move "{tmp_icon}\\{name_ico}{extension_ico}" "{icon_path}"'
+        os.system(command)
+    else:
+        tmp_icon = ''
+        print("Error: No se puedo estraer el cicono")
+    # eliminamos los archivos temporales
+    os.system(f'del /Q /S {tmp_icon}\\*')
     return icon_path
 
+# extrae el icono del juego y 
+@saved_file
+def get_icon(exe_path) -> int:
+    icon_path = extract_icon(exe_path)
+    icon = {'icon_path': icon_path}
+    if 'icons' in file_content:
+        file_content['icons'].append(icon)
+        icon_index = len(file_content['icons']) - 1
+    else:
+        file_content['icons'] = [icon]
+        icon_index = 0
+    return icon_index
+
+@saved_file
 def add_game(path, game_name=None):
     global file_content 
-    os.system(f'./iconsext.exe /save "{path}" "{ICONS_PATH}" -icons')
-    #################################
-    # falta el path del icono #
-    #################################
     
-    path_icon = ''
+    if game_name is None:
+        game_name, _ = os.path.splitext(os.path.basename(path))
+    
+    iconID = get_icon(path)
     game = {
         'name': game_name,
-        'path': game,
-        'icon': path_icon
+        'path': path,
+        'iconID': iconID,
+        'modID': None
         }
+    
+    if 'games' in file_content:
+        file_content['games'].append(game)
+    else:
+        file_content['games'] = [game]
+    return game
 
 
 
@@ -231,8 +267,9 @@ def add_game(path, game_name=None):
 if __name__ == "__main__":
 
 
-    extract_icon("C:\\Users\\notebook\\AppData\\Local\\Vivaldi\\Application\\vivaldi.exe")
+    path = 'J:\\Descargas\\Forever Skies-InsaneRamZes\\ForeverSkies.exe'
     read_storage()
+    add_game(path)
     detect_mods(MOD_PATH)
     
         
